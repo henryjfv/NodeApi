@@ -12,9 +12,11 @@ app.use(express.static("./src/storage"));
 
 app.use('/api', require("./src/routes"));
 
+
+app.listen(PORT, () => { console.log(`Server running in ${PORT}`); })
+
+dbConnect();
+
 // app.get('/', function (req, res) {
 //     res.send('Hello World from node for doctus')
 // })
-
-app.listen(PORT, () => { console.log(`Server running in ${PORT}`); })
-dbConnect();
